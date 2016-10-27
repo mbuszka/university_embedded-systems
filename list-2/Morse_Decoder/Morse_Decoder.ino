@@ -1,6 +1,6 @@
-#include <Timer.h>
+#include <Stopwatch.h>
 
-Timer timer;
+Stopwatch timer;
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);

@@ -1,9 +1,9 @@
-#ifndef Timer_h
-#define Timer_h
+#ifndef Stopwatch_h
+#define Stopwatch_h
 
 #include "Arduino.h"
 
-class Timer {
+class Stopwatch{
   private :
     unsigned int _elapsed;
     unsigned int _started;

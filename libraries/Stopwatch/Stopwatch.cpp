@@ -1,19 +1,19 @@
-#include "Timer.h"
+#include "Stopwatch.h"
 
-unsigned int Timer::start() {
+unsigned int Stopwatch::start() {
   return _started = millis();
 }
 
-unsigned int Timer::stop() {
+unsigned int Stopwatch::stop() {
   return _elapsed += millis() - _started;
 }
 
-unsigned int Timer::reset() {
+unsigned int Stopwatch::reset() {
   unsigned int e = stop();
   _elapsed = 0;
   return e;
 }
 
-unsigned int Timer::elapsed() {
+unsigned int Stopwatch::elapsed() {
   return millis() - _started + _elapsed;
 }
