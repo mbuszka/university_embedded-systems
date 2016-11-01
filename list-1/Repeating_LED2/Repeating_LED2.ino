@@ -1,5 +1,5 @@
 int ledPin = 8;
-int buttonPin = 9;
+int buttonPin = 2;
 
 bool timeline[1000];
 int pos = 1;
@@ -11,7 +11,7 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(buttonPin, INPUT);
   for(int i=0; i < 1000; i++)
-    timeline[i] = false;
+    timeline[i] = false;  
 }
 
 void loop() {
