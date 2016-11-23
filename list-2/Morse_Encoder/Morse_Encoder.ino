@@ -1,4 +1,4 @@
-const int outPin = 4;
+const int outPin = 8;
 const int beepPin = 9;
 
 const int translation_table[36][5] {
