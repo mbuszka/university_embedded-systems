@@ -1,8 +1,8 @@
-const int outPin = 4;
+const int outPin = 8;
 const int beepPin = 9;
 
 const int translation_table[36][5] {
-  {0, 1, -1, -1, -1}, //A
+  {0, 1, -1, -1, -1},   //A
   {1, 0, 0, 0, -1}, //B
   {1, 0, 1, 0, -1}, //C
   {1, 0, 0, -1, -1}, //D
@@ -49,6 +49,7 @@ void setup() {
 
 void loop() {
   String buff = Serial.readStringUntil('\n');
+  Serial.println(buff);
   for(int i=0; i < buff.length(); i++) {
     if (buff[i] == ' ') {
       digitalWrite(outPin, LOW);
@@ -56,7 +57,6 @@ void loop() {
       delay(7 * unit);
     } else {
       int index = buff[i] > '9' ? buff[i] - 'A' : buff[i] + 26 - '0';
-      //Serial.println(index);
       int curr;
       for(int j=0; (j < 5) && ((curr = translation_table[index][j]) != -1); j++) {
         //space between parts of the same letter:
