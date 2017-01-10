@@ -1,6 +1,7 @@
 #include "Stopwatch.h"
 
 unsigned int Stopwatch::start() {
+  if (_running) return;
   _running = true;
   return _started = millis();
 }
